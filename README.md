@@ -13,15 +13,14 @@ Morettin: em [MAT02280/plano-aulas](plano-aulas).
   
 * **Exercícios resolvidos** no canal "Probabilidade e Estatística (EAD)": 
     + vídeos em https://www.youtube.com/c/ProbabilidadeeEstat%C3%ADsticaUFRGS/featured
-    + resoluções em [MAT002219EAD/exercicios-resolvidos](exercicios-resolvidos).
 
 ### Quer aprender a programar em `R`?
 * Primeiro contato com o software `R`: 
-    + como baixar e iniciar o `R`? Arquivo em [R-exams/1_TutorialR.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/1_TutorialR.html)
-    + importar dados no `R`. Arquivo em [R-exams/2_ImportacaoDados.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/2_ImportacaoDados.html)
-    + medidas resumo no `R`. Arquivo em [R-exams/3_SumarizacaoDeDados.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/3_SumarizacaoDeDados.html)
-    + gráficos no `R` com `ggplot`. Arquivo em [R-exams/4_TutorialGraficos.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/4_TutorialGraficos.html)
-    + tabelas no `R` com `leanrR`. Arquivo em [R-exams/5_TutorialTabelas.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/5_TutorialTabelas.html)
+    + como baixar e iniciar o `R`? Arquivo em [1_TutorialR.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/1_TutorialR.html)
+    + importar dados no `R`. Arquivo em [2_ImportacaoDados.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/2_ImportacaoDados.html)
+    + medidas resumo no `R`. Arquivo em [3_SumarizacaoDeDados.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/3_SumarizacaoDeDados.html)
+    + gráficos no `R` com `ggplot`. Arquivo em [4_TutorialGraficos.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/4_TutorialGraficos.html)
+    + tabelas no `R` com `leanrR`. Arquivo em [5_TutorialTabelas.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/5_TutorialTabelas.html)
 
 
 *Agradecimento a toda(o)s monitores (passados, presentes e futuros) pela contribuição na construção desse trabalho.*
