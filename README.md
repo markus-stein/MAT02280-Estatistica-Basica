@@ -1,6 +1,6 @@
-# MAT02219 - Probabilidade e Estatística - EAD
+# MAT02280 - Estatística Básica - EAD
 
-Disciplina "MAT02280 - Estatística Básica" do Dest/UFRGS.
+Disciplina "Estatística Básica" do Dest/UFRGS para ciências sociais, humanas ...
 
 * **Planos de aula** baseados no livro "Estatística Básica", dos autores Bussab e 
 Morettin: em [MAT02280/plano-aulas](plano-aulas).
