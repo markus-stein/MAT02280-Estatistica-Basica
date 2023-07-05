@@ -1,4 +1,4 @@
-# MAT02280 - Estatística Básica - EAD
+# MAT02280 - Estatística Básica
 
 Disciplina "Estatística Básica" do Dest/UFRGS para ciências sociais, humanas ...
 
