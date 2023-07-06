@@ -1,0 +1,156 @@
+---
+title: "Plano Aula 13 e 14"
+# author: "Markus Stein"
+# date: "01 March 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{Types-of-Mass-Communication_logo.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02280 - Estatística Básica - 2023/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### (cont... Variáveis Aleatórias)
+## Variáveis aleatórias contínuas (capítulo 7, Livro Bussab e Morettin)
+Definição **$v.a.$ contínua**: quando o espaço amostral associado a uma $v.a.$ puder assumir valores reais, $\Omega_X \subseteq \mathbb{R}$, ou infinito, denominamos v.a. contínua.
+
+
+**Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
+
+**Exemplo 2**: $X$: PIB do Brasil, $X \in \mathbb{R}$.
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
+
+**Exemplo 3**: $Y$ (consumo) e $X$ (renda), ...
+<!-- $E(Y) = \alpha + \beta X$.   -->
+
+* Geralmente os espaços amostrais, $\Omega$, de experimentos envolvendo observação de v.a. contínuas coincidem com o espaço da própria v.a., $\Omega_X$.
+    + No **exemplo 1**: $\Omega = \Omega_X = (0, \infty)$
+    + No **exemplo 2**: $\Omega = \Omega_X = \mathbb{R}$
+
+* Como representar a distribuição de probabilidade de uma v.a. contínua?
+
+### 1. Função Densidade de Probabilidade  (f.d.p)
+Definição **função densidade de probabilidade**: a função $f: \Omega_X \rightarrow  [0,1]$ não negativa, $f(x) \geq 0$  para todo $x \in (- \infty, \infty)$, e $\int_{- \infty}^{ \infty} f(x) \: dx = 1$, é denominada função densidade de probabilidade.
+
+* Probabilidades estão associadas a áreas para v.a. contínuas.
+    + A probabilidade de uma v.a. contínua $X$ assumir um particular valor é igual a zero, $P(X=x) = 0$ para todos $X \in \Omega_X$.
+
+### 2. Esperança e Variância (seção 7.2, Livro Bussab e Morettin)
+* Valor esperado, ou média - $E(X) = \int_{- \infty}^{ \infty} x \: f(x) \: dx$;
+* Variância - $V(X) =  E \left\{ \left[ x - E(X) \right]^2 \right\} = E(X^2) - \left[ E(X) \right]^2 = \int_{- \infty}^{ \infty} \left[ x - E(X) \right]^2 \: f(x) \: dx$;
+* Proprieadades: ... .
+
+### 3. Função de Distribuição (Acumulada) de Probabilidade (seção 7.3, Livro Bussab e Morettin)
+Definição **função de distribuição**: a função $F: \Omega_X \rightarrow  [0,1]$ tal que $F(x) = P(X \leq  x) = \int_{- \infty}^{x} f(y) \: dy$ é denominada funçao de distribuição (acumulada).
+
+* Propriedades: $lim_{x \rightarrow \infty} F(x) = 1$ e $lim_{x \rightarrow - \infty} F(x) = 0$;
+    + $P(a \leq X \leq b) = F(b) - F(a)$;
+    + $F(x)$ existe para todos os números reais, diferente da f.d.p..
+
+### Principais Modelos para V.A. Contínuas (seção 7.4, Livro Bussab e Morettin)
+* Modelos?
+    + Distribuição Uniforme, distribuição Exponencial e distribuição Normal. Na área 3 veremos a distribuição *t*, distribuição *qui quadrado* e a distribuição *F*.
+
+* **Modelo Normal** ou Distribuição de Gauss:
+    + é uma das mais importantes distribuições de probabilidade em Estatística;
+    + Como calcular probabilidades? Modelo **normal padrão**, usando **valores tabelados**;
+    + **Padronização**: se $X \sim Normal (\mu, \sigma^2)$, então $Z = \frac{X - \mu}{\sigma} \sim Normal (0,1)$.
+
+**(... cont.) Exemplo 2**: Se assumirmos $X \sim Normal(\mu, \sigma^2)$. Então conhecemos $f(x)$, $F(x)=?$, $E(X) = \mu$ e $V(X) = \sigma^2$, ... .
+
+
+* Como verificar se modelos se ajustam ("encaixam") a dados reais?
+    + histograma, gráfico de probabilidade, *box-plot*, ...
+    + testes de aderência (não paramétricos), Kolmogorov-Smirnov, Shapiro-Wilks, ... (não veremos na disciplina).
+
+\vspace{0.5cm}
+
+***
+## Ler slides e ver vídeos da semana 7.
+## Fazer lista de exercícios 2-2.
+## Fazer o Quiz da semana 7 - VALE NOTA!!!
+***  
+
+
+<!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
+
+\vspace{0.5cm}
+
+Exemplo: (*slides 2-2, página 30*) Seja a v.a.
+
+$X:$ tempo de duração de motores produzidos por uma fábrica de carros. 
+
+* Do enunciado sabemos $E(X) = 150.000 km$, $V(X)=5.000^2 km$ e $X \sim Normal$;
+    + assim $X \sim Normal(\mu=150000, \sigma=50000)$.
+
+No `R` os comandos `dnorm(x, media, desvio)`, `pnorm(x, media, desvio)`, `qnorm(x, media, desvio)` e `rnorm(n, media, desvio)` são utilizados para calcular a função densidade, função de distribuição, quantis e gerar números aleatórios segundo uma distribuição normal.
+
+a. $P(140000 \leq X \leq 160000) = F(160000) - F(140000)$ ou
+$$P(140000 \leq X \leq 160000) = P( \frac{140000 - 150000}{5000} \leq \frac{X - \mu}{\sigma} \leq \frac{160000 - 150000}{5000}) = P \left( -2 \leq Z \leq 2 \right) = \Phi(2) - \Phi(-2).$$
+
+```{r}
+media <- 150000         # media de X
+desvio <- 5000          # desvio padrao de X
+pnorm(160000, media, desvio) - pnorm(140000, media, desvio)
+```
+ou, usando `pnorm()` sem especificar `media` e `desvio` temos a normal padrão, 
+```{r}
+pnorm(2) - pnorm(-2)
+```
+E em forma de gráfico
+```{r, fig.height=3, fig.width=3, fig.align='center', echo=FALSE}
+x <- seq(-3, 3, 0.01)
+fx <- dnorm(x)
+plot(x, fx, type = "l", ylim = c(0.016, 0.4))   # grafico da distribuicao de probabilidade
+polygon(c(-2, x[abs(x) <= 2], 2), c(0, fx[abs(x) <= 2], 0), col="red")
+```
+
+b. $P(X \leq 170000) = P(Z \leq 4)$ ?
+```{r}
+media <- 150000         # media de X
+desvio <- 5000          # desvio padrao de X
+pnorm(170000, media, desvio)
+```
+E em forma de gráfico da normal padrão
+```{r, fig.height=3, fig.width=3, fig.align='center', echo=FALSE}
+x <- seq(-3, 4, 0.01)
+fx <- dnorm(x)
+plot(x, fx, type = "l", ylim = c(0.016, 0.4))   # grafico da distribuicao de probabilidade
+polygon(c(-3, x[abs(x) <= 4], 4), c(0, fx[abs(x) <= 4], 0), col="red")
+```
+
+c. $P(X \leq ???) = 0,01$? ou $F(???) = 0,01$?  
+Usando a fun;'ao `qnorm(p, media, desvio)` diretamente
+
+```{r}
+qnorm(1-0.01, media, desvio)
+```
+E em forma de gráfico da normal padrão
+```{r, fig.height=3, fig.width=3, fig.align='center', echo=FALSE}
+x <- seq(-3, 3, 0.01)
+fx <- dnorm(x)
+plot(x, fx, type = "l", ylim = c(0.016, 0.4))   # grafico da distribuicao de probabilidade
+z <- qnorm(1-0.01)
+polygon( c( z, z, x[x > z], 3), c(0, dnorm(z), fx[x > z], 0), col="red")
+text( x = z, y = dnorm(z) + 0.1, round( z, 3))
+abline( v = round( z, 3))
+```
+Assim, $X = z * \sigma + \mu = `r round( z, 3)` * `r desvio` + `r format( media, scientific=FALSE)` = `r format( round( z, 3) * desvio + media, scientific=FALSE)`$.
+
+(*para a distribuição Uniforme, `dunif()`, `punif()`, `qunif()` e `runif()`, e para Exponencial, `dexp()`, `pexp()`, `qexp()` e `rexp()`*.)
