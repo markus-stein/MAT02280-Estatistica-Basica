@@ -1,0 +1,55 @@
+---
+title: "Avaliação Parcial 2"
+# author: "Markus Stein"
+# date: "15 February 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{Types-of-Mass-Communication_logo.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02280 - Estatística Básica - 2023/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Avaliação de Inferência Estatística
+## Intervalos do confiança e testes de hipóteses
+
+Realizar o desenvolvimento das questões 5 e 6 do questionário das semanas 9 a 12 (intervalos de confiança - IC), e questões 4, 6 e 7 do questionário das semana 13 a 16 (testes de hipóteses - TH).
+
+### Elementos essenciais  
+
+* Indicar a variável de interese e o parâmetro de interesse (notação).
+
+* Passo a passo de IC ou TH.
+
+* Interpretação e conclusão. (elementos essenciais, em termos do problema)
+
+### Realização e Entrega 
+
+* Quem quiser poderá realizar a tarefa em dupla ou trio.
+
+    + Nesse caso escolher as questões de um dos integrantes. 
+
+* Desenvolver à mão e entregar imagens em um arquivo `.pdf`.
+
+### Dúvidas? 
+
+* **Entrega** até o **dia 04/09**, horário de aula.
+
+\begin{center}
+Bom trabalho!
+\end{center}
