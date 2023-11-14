@@ -16,7 +16,7 @@ always_allow_html: yes
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02280 - Estatística Básica - 2023/1
+MAT02280 - Estatística Básica - 2023/2
 }
 \renewcommand{\headrulewidth}{0pt} 
 
@@ -101,7 +101,7 @@ Veremos critérios para calcular tamanhos de amostras ao longo da dsiciplina.
 ***
 ## Ler slides e ver vídeo da semana 1.
 ## Fazer exercícios do livro Barbetta.
-## Fazer o Quiz da semana 1 e 2 - VALE NOTA!!!
+<!-- ## Fazer o Quiz da semana 1 e 2 - VALE NOTA!!! -->
 ***
 
 ## Referências e Links interessantes
