@@ -16,7 +16,7 @@ always_allow_html: yes
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02280 - Estatística Básica - 2023/2
+MAT02280 - Estatística Básica - 2025/1
 }
 \renewcommand{\headrulewidth}{0pt} 
 
