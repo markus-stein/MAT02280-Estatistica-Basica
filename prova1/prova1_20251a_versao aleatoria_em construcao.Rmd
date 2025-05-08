@@ -1,0 +1,152 @@
+---
+# title: "Plano Aula 07 e 08"
+# author: "Markus Stein"
+# date: "10 March 2025"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{MAT02280}
+\rhead{2025/1}
+\chead{
+Estatística Básica - PROVA 1 - Turma E2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+\vspace{0.5cm}
+
+Nome:  \hspace{10cm} Cartão:
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\vspace{1.0cm}
+
+**Questão 1.** Em um estudo sobre o número de erros de impressão de um livro, 
+foi escolhida uma amostra de 50 páginas e encontrando o seguinte número de erros 
+por página:
+
+
+<!-- ```{r q1, echo=FALSE, results="asis", message=FALSE, warning=FALSE} -->
+<!-- set.seed(202511) -->
+<!-- n <- 500 -->
+<!-- cigarros <- rnbinom(n, size = 2, mu = 8) # aproximadamente simétrica -->
+<!-- bebidas <- rpois(n, lambda = 4) # assimétrica à direita -->
+
+<!-- breaks <- c(-1, 0, 5, 10, 15, Inf) -->
+<!-- labels <- c("0", "1–5", "6–10", "11–15", "16-20") -->
+
+<!-- freq_cigarros <- table(cut(cigarros, breaks = breaks, labels = labels)) -->
+<!-- freq_bebidas <- table(cut(bebidas, breaks = breaks, labels = labels)) -->
+
+<!-- df <- data.frame( -->
+<!--   "Classe de Consumo" = labels, -->
+<!--   "Cigarros (freq.)" = as.numeric(freq_cigarros), -->
+<!--   "Bebidas (freq.)" = as.numeric(freq_bebidas) -->
+<!-- ) -->
+
+<!-- knitr::kable(df, caption = "Distribuição de frequências do consumo de cigarros e bebidas alcoólicas em um estudo sobre saúde populacional.", col.names = c("Consumo", "Cigarros (f)", "Bebidas (f)")) -->
+
+<!-- centro <- c(0, 3, 8, 13, 18) -->
+<!-- ``` -->
+
+<!-- **Parte 1 — Interpretação dos dados** -->
+
+<!-- Cigarros: $\sum xf = `r sum(centro*freq_cigarros)`$; $\sum x^2f = `r format(sum(centro^2*freq_cigarros),scientific=FALSE)`$. Bebidas: $\sum xf = `r sum(centro*freq_bebidas)`$; $\sum x^2f = `r format(sum(centro^2*freq_bebidas),scientific=FALSE)`$. -->
+
+a. Quais são as variáveis estudadas? Classifique-as. Qual é a unidade de observação?
+
+b. Qual a frequência relativa de indivíduos que consomem 0 cigarros por dia?
+
+c. Qual a frequência absoluta e relativa de indivíduos que consomem até 10 cigarros por dia?
+
+d. Represente graficamente as distribuições de frequências das variáveis.
+
+e. Calcule o consumo médio de bebidas alcoólicas, o intervalo mediano e o intervalo modal.
+
+f. Qual variável apresenta maior variabilidade, consumo de cigarros ou consumo de bebidas alcoólicas? Justifique qual medida você utilizou.
+
+g. Qual variável apresenta maior assimetria? Qual o tipo de assimetria?
+
+<!-- --- -->
+
+<!-- **Parte 2 — Responda com V (verdadeiro) ou F (falso)** -->
+
+<!-- (1) Quando a variável quantitativa tem distribuição unimodal e simétrica, mais da metade de seus valores são inferiores à média. -->
+
+<!-- (2) A mediana é uma boa medida de tendência central para uma variável com distribuição muito assimétrica, pois não é muito influenciada por valores extremos. -->
+
+<!-- (3) O coeficiente de variação é uma medida adimensional. -->
+
+<!-- (4) Quanto maior a variância de uma variável, menor será seu desvio padrão. -->
+
+<!-- (5) A variância depende diretamente da média da variável. -->
+
+<!-- (6) População é o conjunto de todos os elementos que possuem certa característica de interesse. -->
+
+<!-- (7) Amostra é qualquer subconjunto retirado da população. -->
+
+<!-- (8) Parâmetro é um valor que resume a informação sobre uma variável na população. -->
+
+<!-- Solution: -->
+<!-- **Parte 1**   -->
+<!-- (a) As variáveis são: consumo de cigarros (média diária) e consumo de bebidas alcoólicas (doses semanais). Ambas são quantitativas discretas. Unidade: indivíduo adulto.   -->
+<!-- (b) Cigarros — distribuição assimétrica à direita.   -->
+<!-- (c) Histogramas ou boxplots são adequados para analisar forma e assimetria.   -->
+<!-- (d) O consumo de cigarros é mais concentrado, enquanto o de bebidas é mais disperso, com cauda longa à direita. -->
+
+<!-- **Parte 2**   -->
+<!-- F; V; V; F; F; V; V; V -->
+
+<!-- Meta-information: -->
+<!-- exname: distribuicao_vf_2 -->
+<!-- extype: cloze -->
+<!-- exsolution: F;V;V;F;F;V;V;V -->
+
+```{r q2, echo=FALSE, results='hide', message=FALSE, warning=FALSE, }
+## adaptacao exercicio 25 livro sidia
+
+# library(exams)
+set.seed(202511)
+
+## dados populacionais
+media0 <- 205
+dp_pop <- 18
+
+## dados amostra
+media_amostra <- 227
+s_amostra <- 21.9
+n <- 8
+alpha <- 0.01
+
+# Teste t de Student
+tcalc <- (media_amostra - media0) / (s_amostra / sqrt(n))
+df <- n - 1
+p_value <- 2 * (1 - pt(abs(tcalc), df=df)) # Teste bilateral
+tcalc; p_value
+
+## Teste Z
+zcalc <- (media_amostra - media0) / (dp_pop / sqrt(n))
+p_value <- 2 * (1 - pnorm(abs(zcalc))) # Teste bilateral
+zcalc; p_value
+
+#$x (mg\L)$: `r paste(x, sep = "; ")` ( $\overline x/$: `r mean(x)`; $s$: `r sd(x)`)
+```
+
+**Questão 2.** O conteúdo médio de **material sólido** em suspensão na **água** do rio R costuma ser de $`r media0` \: \: mg/L$, com desvio padrão do conteúdo de $\sigma = `r dp_pop` \: \: mg/L$. Uma coleta recente, em `r n` pontos desse curso d'água, forneceu uma média amostral  $\overline x = `r media_amostra` \: \: mg/L$.
+
+a. Qual a variável e o parâmetro de interesse?
+
+b. Verifique se houve alteração na quantidade de material sólido em suspensão recentemente, para um nível de significância de $\alpha = `r alpha`$.
+
+c. Quais as suposições necessárias para a realização do teste em (b)?
+
+d. Calcule o $p$-valor para o teste realizado em (b).
+
+e. Qual o tipo de erro pode ser cometido com sua conclusão? Explique o que isso significa em termos do problema.

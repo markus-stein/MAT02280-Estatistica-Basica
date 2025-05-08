@@ -1,0 +1,45 @@
+---
+title: "Atividade Autônoma 3"
+# author: "Markus Stein"
+# date: "25 January 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{}
+\rhead{}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02280 - Estatística Básica - 2025/1
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercício de Probabilidade - Variável Aleatória Discreta
+
+Uma companhia de seguros vendeu apólices a cinco pessoas, todas da mesma idade e com boa saúde. De acordo com as tábuas atuariais, a probabilidade de que uma pessoa daquela idade esteja viva daqui a 30 anos é de $2/3$. Responda:
+
+
+a. Qual a variável aleatória $X$ de interesse?
+
+b. Quais os possíveis valores possíveis para $X$ ($S_x$)?
+
+c. A variável aleatória segue alguma distribuição conhecida? Se sim, qual? Indique as suposições.
+
+Calcule a probabilidade de que, daqui a 30 anos:
+
+d. exatamente duas pessoas estejam vivas.
+
+e. todas as pessoas estejam vivas.
+
+f. pelo menos três pessoas estejam vivas.

@@ -1,0 +1,201 @@
+---
+# title: "Plano Aula 07 e 08"
+# author: "Markus Stein"
+# date: "10 March 2025"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{MAT02280}
+\rhead{2025/1}
+\chead{
+Estatística Básica - PROVA 1 - Turma E2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+\vspace{0.5cm}
+
+Nome:  \hspace{10cm} Cartão:
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\vspace{1.0cm}
+
+**Questão 1.** Em um estudo sobre o número de erros de impressão de um livro, 
+foi escolhida uma amostra de 50 páginas e encontrando o seguinte número de erros 
+por página:
+
+\begin{table}[h!]
+  \centering
+  \caption{Distribuição de frequências do número de erros por página de uma amostra de 50 páginas de um livro.}
+
+ \begin{tabular}{c|c|c|c|p{2cm}|p{2cm}|p{2cm}}
+ \hline
+ nº de erros por página & $f$ & $x \times f$ & $(x - \bar{x})^2 \times f$ & & & \\
+ \hline
+ 0 &    &    &  & & & \\
+ 1 & 20 & 20 & 0,65 & & & \\
+ 2 & 8  & 16  & 5,38 & & & \\
+ 3 & 5  & 15  & 16,56 & & & \\
+ 4 & 2  & 8  & 15,90 & & & \\
+ \hline
+ $\sum$ &  &  &  & & & \\
+ \hline
+ \end{tabular}
+\end{table}
+(Obs: $f$ denota a frequência absoluta e $x$ o número de erros por página, para cada linha da tabela).
+
+
+a. Quais são as variáveis estudadas? Classifique-as. Qual é a unidade de observação?
+
+b. Qual a frequência relativa de páginas com 0 erros?
+
+c. Qual a frequência absoluta e relativa de páginas com até 2 erros?
+
+<!-- d. Represente graficamente a distribuição de frequências da variável. -->
+
+d. Calcule o número médio de erros por página $\overline x$, a mediana $m_d$ e moda $m_o$ do número de erros.
+
+e. Qual o desvio padrão do número de erros por página $s$? E o coeficiente de variação $CV$?.
+
+<!-- g. Qual variável apresenta maior assimetria? Qual o tipo de assimetria? -->
+
+<!-- --- -->
+
+<!-- **Parte 2 — Responda com V (verdadeiro) ou F (falso)** -->
+
+<!-- (1) Quando a variável quantitativa tem distribuição unimodal e simétrica, mais da metade de seus valores são inferiores à média. -->
+
+<!-- (2) A mediana é uma boa medida de tendência central para uma variável com distribuição muito assimétrica, pois não é muito influenciada por valores extremos. -->
+
+<!-- (3) O coeficiente de variação é uma medida adimensional. -->
+
+<!-- (4) Quanto maior a variância de uma variável, menor será seu desvio padrão. -->
+
+<!-- (5) A variância depende diretamente da média da variável. -->
+
+<!-- (6) População é o conjunto de todos os elementos que possuem certa característica de interesse. -->
+
+<!-- (7) Amostra é qualquer subconjunto retirado da população. -->
+
+<!-- (8) Parâmetro é um valor que resume a informação sobre uma variável na população. -->
+
+<!-- Solution: -->
+<!-- **Parte 1**   -->
+<!-- (a) As variáveis são: consumo de cigarros (média diária) e consumo de bebidas alcoólicas (doses semanais). Ambas são quantitativas discretas. Unidade: indivíduo adulto.   -->
+<!-- (b) Cigarros — distribuição assimétrica à direita.   -->
+<!-- (c) Histogramas ou boxplots são adequados para analisar forma e assimetria.   -->
+<!-- (d) O consumo de cigarros é mais concentrado, enquanto o de bebidas é mais disperso, com cauda longa à direita. -->
+
+<!-- **Parte 2**   -->
+<!-- F; V; V; F; F; V; V; V -->
+
+<!-- Meta-information: -->
+<!-- exname: distribuicao_vf_2 -->
+<!-- extype: cloze -->
+<!-- exsolution: F;V;V;F;F;V;V;V -->
+
+\vspace{1.0cm}
+
+**Questão 2.** Responda verdadeiro (V) ou falso (F):
+
+a. ( \hspace{0,5cm} ) Metade dos valores de uma variável quantitativa são sempre menores que a mediana.
+
+b. ( \hspace{0,5cm} ) Quando a variável quantitativa tem distribuição unimodal e assimétrica, metade de seus valores é menor que a média.
+
+c. ( \hspace{0,5cm} ) A mediana não é uma boa medida de tendência central para uma variável quantitativa com distribuição unimodal muito assimétrica, pois esta medida é muito influenciada por valores extremos.
+
+d. ( \hspace{0,5cm} ) A média é quem melhor representa um conjunto de dados, pois ela é a única medida de tendência central que leva em consideração todas as observações existentes.
+
+e. ( \hspace{0,5cm} ) Se a média e a mediana de um conjunto de dados forem respectivamente 10 e 15 pode-se dizer que essa distribuição não apresenta assimetria.
+
+<!-- f. ( \hspace{0,5cm} ) Quanto menor a média, menor é a variância. -->
+
+f. ( \hspace{0,5cm} ) Quanto maior é a variância, menor é o desvio padrão.
+
+g. ( \hspace{0,5cm} ) O coeficiente de variação é uma medida na mesma unidade de medida da variável original.
+
+<!-- O coeficiente de variação pode ser negativo. -->
+
+
+\newpage
+
+**Questão 3.** Realizou-se uma pesquisa com o intuito de verificar o assunto de interesse dos adultos de uma certa população. Cada respondente indicou um escore de -100 a 100 referente à sua preferência para cada assunto. Os dados obtidos estão resumidos no gráfico abaixo. 
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\linewidth]{boxplot_prova_2017_2.png} 
+  \caption{Boxplot das preferências por sexo.}
+  \label{Fig1}
+\end{figure}
+(Obs.: o símbolo $\times$ dentro das caixas indica a média.).
+
+Responda:
+
+a. Quais as variáveis analisadas? Classifique-as. Qual é a unidade de observação? 
+
+b. Utilizando os gráficos de boxplot da figura 1 responda verdadeiro (V) ou falso (F):
+
+( \hspace{0,5cm} ) Os respondentes do sexo masculino tiveram preferências semelhantes entre economia e esportes.
+
+( \hspace{0,5cm} ) No assunto economia, as medianas enre homens e mulheres não são equivalentes.
+
+( \hspace{0,5cm} ) Os homens tenderam a informar um escore de interesse similar ao das mulheres em todos os assuntos.
+
+( \hspace{0,5cm} ) Os escores no assunto política apresentam distribuições assimétricas.
+
+( \hspace{0,5cm} ) No assunto esporte os escores os escores dos homens são mais homogêneos do que os escores das mulheres.
+
+\vspace{1.0cm}
+
+**Questão 4.** Responda verdadeiro (V) se a variável aleatória presente nos problemas de probabilidade abaixo possui distribuição binomial ou falso (F) caso contrário:
+
+<!-- ( \hspace{0,5cm} ) O show 60 minutes do canal de televisão CBS tem sido um programa de sucesso por muitos anos. Esse show tinha uma audiência de 20, significando que dentro os aparelhos de TV ligados $20\%$ estavam sintonizados no 60 Minutes. Suponha que o anunciante deseja verificar se realmente o valor da audiência é de $20\%$ realizando a sua própria pesquisa. -->
+
+( \hspace{0,5cm} ) A companhia financeira A prepara restituições de impostos para pessoas físicas. De acordo com o serviço da Receita Federal, indivíduos que ganham entre 20.000 e 30.000 reais passam por auditoria a uma taxa
+de $30\%$. A empresa quer saber a probabilidade de 5 indivíduoss em um grupo de 10 pessoas, que possuem renda de 20.000 a 30.000, passarem por auditoria.
+
+( \hspace{0,5cm} ) Para um período recente de 100 anos, houve 93 grandes terremotos. Qual a probabilidade de o número
+de terremotos em um ano ser igual à 7.
+
+( \hspace{0,5cm} ) Calcule a probabilidade de que o número de clientes de uma livraria em um dado dia de trabalho seja
+igual à 40.
+
+( \hspace{0,5cm} ) O tempo médio para realização de determinada tarefa é de 50 minutos, calcule a probabilidade de que
+algum indivíduo realize essa tarefa em menos de 30 minutos.
+
+
+\newpage
+
+**Questão 5.** Uma pequena companhia de seguros analisou a frequência com que todos os seus segurados utilizaram serviços hospitalares durante um certo período. Os 
+resultados são apresentados na tabela abaixo.
+
+\begin{center}
+\begin{tabular}{cccc}
+\hline
+  & \multicolumn{2}{c}{Sexo} & \\
+\cline{2-3}
+Usou serviço hospitalar & Masculino & Feminino & $\sum$ \\ \hline
+Sim     & 100 & 150 & 250   \\
+Não    & 900 & 850 & 1750  \\ \hline
+$\sum$  & 1000 & 1000& 2000  \\ \hline
+\end{tabular}
+\end{center}
+
+Selecionando-se um segurado ao acaso, responda (utilizando o conceito de 
+probabilidade frequentista):
+
+a. Qual a probabilidade de ser um homem e que não tenha utilizado serviços hospitalares?
+
+b. Qual a probabilidade de ser mulher ou tenha utilizado serviços hospitalares?
+
+c. Sabendo que o segurado é homem, qual a probabilidade de este ter usado serviços hospitalares?
+
+d. Qual a probabilidade de ser homem dado que o segurado não usou serviços hospitalares?
